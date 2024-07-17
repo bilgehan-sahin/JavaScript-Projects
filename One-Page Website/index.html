@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Space Station | Resort </title>
+    <style>
+        /* Lightbox CSS */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+        .lightbox-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover, .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        @media only screen and (max-width: 700px){
+            .lightbox-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!---NAV-->
+    <div>
+        <div>
+            <ul>
+                <a href="#home"><li>HOME</li></a>
+                <a href="#gallery"><li>GALLERY</li></a>
+                <a href="#contact"><li>RESERVATIONS</li></a>
+            </ul>
+        </div>
+    </div>
+    <!---END NAV-->
+
+    <!---HOME-->
+    <div id="home">
+        <div>
+            <div>
+                <span>The Space Station</span>
+            </div>
+        </div>
+    </div>
+    <!---END HOME-->
+
+    <!---GALLERY-->
+    <section>
+        <div id="gallery">
+            <h1>Gallery</h1>
+            <div>
+                <!---PHOTO CONTAINER 1-->
+                <div>
+                    <div>
+                        <img class="thumbnail" src="./THUMB/thumbnail_1.jpg" alt="Image of the solar system" onclick="openLightbox(this)">
+                        <div>
+                            <h3>Click to Enlarge</h3>
+                            <p>We have several space launches departing daily, book your flight today!</p>
+                        </div>
+                    </div>
+                </div>
+                <!---END PHOTO CONTAINER 1-->
+                <!---PHOTO CONTAINER 2-->
+                <div>
+                    <div>
+                        <img class="thumbnail" src="./THUMB/thumbnail_2.jpg" alt="Image of the solar system" onclick="openLightbox(this)">
+                        <div>
+                            <h3>Click to Enlarge</h3>
+                            <p>We have several space launches departing daily, book your flight today!</p>
+                        </div>
+                    </div>
+                </div>
+                <!--- END PHOTO CONTAINER 2-->
+                <!---PHOTO CONTAINER 3-->
+                <div>
+                    <div>
+                        <img class="thumbnail" src="./THUMB/thumbnail_3.jpg" alt="Image of the solar system" onclick="openLightbox(this)">
+                        <div>
+                            <h3>Click to Enlarge</h3>
+                            <p>We have several space launches departing daily, book your flight today!</p>
+                        </div>
+                    </div>
+                </div>
+                <!--- END PHOTO CONTAINER 3-->
+                <!--- PHOTO CONTAINER 4-->
+                <div>
+                    <div>
+                        <img class="thumbnail" src="./THUMB/thumbnail_4.jpg" alt="Image of the solar system" onclick="openLightbox(this)">
+                        <div>
+                            <h3>Click to Enlarge</h3>
+                            <p>We have several space launches departing daily, book your flight today!</p>
+                        </div>
+                    </div>
+                </div>
+                <!--- END PHOTO CONTAINER 4-->
+                <!---PHOTO CONTAINER 5-->
+                <div>
+                    <div>
+                        <img class="thumbnail" src="./THUMB/thumbnail_5.jpg" alt="Image of the solar system" onclick="openLightbox(this)">
+                        <div>
+                            <h3>Click to Enlarge</h3>
+                            <p>We have several space launches departing daily, book your flight today!</p>
+                        </div>
+                    </div>
+                </div>
+                <!--- END PHOTO CONTAINER 5-->
+                <!---PHOTO CONTAINER 6-->
+                <div>
+                    <div>
+                        <img class="thumbnail" src="./THUMB/thumbnail_6.jpg" alt="Image of the solar system" onclick="openLightbox(this)">
+                        <div>
+                            <h3>Click to Enlarge</h3>
+                            <p>We have several space launches departing daily, book your flight today!</p>
+                        </div>
+                    </div>
+                </div>
+                <!--- END PHOTO CONTAINER 6-->
+                <!---PHOTO CONTAINER 7-->
+                <div>
+                    <div>
+                        <img class="thumbnail" src="./THUMB/thumbnail_7.jpg" alt="Image of the solar system" onclick="openLightbox(this)">
+                        <div>
+                            <h3>Click to Enlarge</h3>
+                            <p>We have several space launches departing daily, book your flight today!</p>
+                        </div>
+                    </div>
+                </div>
+                <!--- END PHOTO CONTAINER 7-->
+                <!---PHOTO CONTAINER 8-->
+                <div>
+                    <div>
+                        <img class="thumbnail" src="./THUMB/thumbnail_8.jpg" alt="Image of the solar system" onclick="openLightbox(this)">
+                        <div>
+                            <h3>Click to Enlarge</h3>
+                            <p>We have several space launches departing daily, book your flight today!</p>
+                        </div>
+                    </div>
+                </div>
+                <!--- END PHOTO CONTAINER 8-->
+                <!---PHOTO CONTAINER 9-->
+                <div>
+                    <div>
+                        <img class="thumbnail" src="./THUMB/thumbnail_9.jpg" alt="Image of the solar system" onclick="openLightbox(this)">
+                        <div>
+                            <h3>Click to Enlarge</h3>
+                            <p>We have several space launches departing daily, book your flight today!</p>
+                        </div>
+                    </div>
+                </div>
+                <!--- END PHOTO CONTAINER 9-->
+            </div>
+        </div>
+    </section>
+    <!--- END GALLERY-->
+
+    <!-- Lightbox HTML -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <!--- RSVP -->
+    <section>
+        <div id="contact">
+            <div>
+                <h1>Reservations</h1>
+                <div>
+                    <h2><span>Your adventure is just around the moon.</span>
+                        <br/>Reserve your flight today!
+                    </h2>
+                    <p>Please provide us with your basic contact information.</p>
+                    <div>
+                        <form action="" method="post">
+                            <input class="rsvp" type="text" value="">
+                            <input class="rsvp" type="text" value="">
+                            <input class="rsvp" type="text" value="">
+                            <input class="rsvp" type="text" value="">
+                            <div class="form-spacer">
+                                <label class="terms">Terms and Conditions</label>
+                            </div>
+                            <div>
+                                <input type="submit" value="submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- END RSVP -->
+
+    <!--- FOOTER -->
+    <div id="foooter">
+        <p>www.thespacestation.space | &copy; 2024 </p>
+    </div>
+    <!--- END FOOTER -->
+
+    <script>
+        // Lightbox JavaScript
+        function openLightbox(element) {
+            var lightbox = document.getElementById('lightbox');
+            var lightboxImg = document.getElementById('lightbox-img');
+            lightbox.style.display = 'block';
+            lightboxImg.src = element.src.replace('THUMB', 'IMAGE');
+        }
+
+        function closeLightbox() {
+            var lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
